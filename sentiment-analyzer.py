@@ -93,13 +93,13 @@ def evaluate_model(
                 predicted_label == "neg"
             ):
                 continue
-            if score >= 0.5 and true_label["pos"]:
+            if score >= 0.5 and true_label['cats']["pos"]:
                 true_positives += 1
-            elif score >= 0.5 and true_label["neg"]:
+            elif score >= 0.5 and true_label['cats']["neg"]:
                 false_positives += 1
-            elif score < 0.5 and true_label["neg"]:
+            elif score < 0.5 and true_label['cats']["neg"]:
                 true_negatives += 1
-            elif score < 0.5 and true_label["pos"]:
+            elif score < 0.5 and true_label['cats']["pos"]:
                 false_negatives += 1
     precision = true_positives / (true_positives + false_positives)
     recall = true_positives / (true_positives + false_negatives)
