@@ -18,7 +18,7 @@ doesn't matter. (The worst is sort of tedious - like Office Space with less humo
 def train_model(
     training_data: list,
     test_data: list,
-    iterations: int = 20
+    iterations: int = 5
 ) -> None:
     # Build pipeline
     nlp = spacy.load("en_core_web_sm") # load the built-in en_core_web_sm pipeline
